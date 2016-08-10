@@ -15,8 +15,8 @@ angular.module('phonesApp', [
                 template: '<phones-list></phone-list>'
             }).
             when('/phones/:phoneId', {
-                template: '<phone-detail></phone-detail>'
+                template: '<phone-details></phone-details>'
             }).
-            otherwise('/phones');
+             otherwise('/phones');
         }
     ]);

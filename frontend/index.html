@@ -1,17 +1,47 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="phonesApp">
 
     <head>
         <meta charset="utf-8">
-        <title>Google Phone Gallery</title>
+        <title>Phone Gallery</title>
 
         <link rel="stylesheet" href="css/app.css" />
     </head>
 
-    <body ng-app="phonesApp">
-        <div ng-view></div>
+    <body >
+
+
+        <header>
+            <nav class="blue lighten-2">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="index.html" class="brand-logo">Phone shop</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<div class = "main" ng-view></div>
+<div class = "userInfo"></div>
+
+        <footer class="page-footer blue lighten-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">О нас</h5>
+                        <p class="white-text text-lighten-4">Не знаете, где провести сегодняшний вечер?
+                          Значит, Вы зашли по адресу. У нас вы найдете всё, чтобы отлично провести вечер.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2016 Materialize, All rights reserved.
+                </div>
+            </div>
+        </footer>
 
         <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
         <script src="js/lib.js"></script>
         <script src="js/app.js"></script>
     </body>

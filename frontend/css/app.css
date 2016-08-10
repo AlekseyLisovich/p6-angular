@@ -10,13 +10,116 @@ body {
   width: 400px;
 }
 #wrapper {
-  width: 85%;
-  height: 500px;
+  width: 100%;
 }
 .section {
-
     float:left;
-    height:250px;
+    height:270px;
     margin-left:10px;
-    width:500px;
+    width:450px;
+}
+.col-md-2{
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+.searchLabel{
+  float: left;
+  width: 100px;
+  font-size: 24pt;
+}
+
+.searchInput{
+  text-align: center;
+  margin-left: 15px;
+  float: left;
+  width: 25%;
+}
+.btn{
+  position: absolute;
+
+}
+h1 {
+  border-bottom: 1px solid gray;
+}
+
+/* View: Phone list */
+.phones {
+  list-style: none;
+}
+
+.phones li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+}
+
+/* View: Phone detail */
+.phone {
+  background-color: white;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.phone-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.phone-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.phone-thumbs li {
+  background-color: white;
+  display: inline-block;
+  margin: 1em;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.main{
+  margin-left: 10%;
+  width: 75%;
+
+}
+.userInfo{
+
+  width: 15%;
+}
+footer{
+
 }
