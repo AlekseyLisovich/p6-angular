@@ -1,21 +1,22 @@
 body {
   padding-top: 20px;
 }
-
-.phones {
-  list-style: none;
-}
-
-.phones li {
-  clear: both;
-  height: 115px;
-  padding-top: 15px;
-}
-
-.thumb {
-  float: left;
-  height: 100px;
-  margin: -0.5em 1em 1.5em 0;
-  padding-bottom: 1em;
+.card-image{
+  position: absolute;
+  top: 30px;
   width: 100px;
+}
+.card{
+  width: 400px;
+}
+#wrapper {
+  width: 85%;
+  height: 500px;
+}
+.section {
+
+    float:left;
+    height:250px;
+    margin-left:10px;
+    width:500px;
 }

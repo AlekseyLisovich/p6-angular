@@ -89,6 +89,14 @@ gulp.task('app:scripts', function(cb) {
         .pipe(gulp.dest(targetDir));
 });
 
+gulp.task('app:partials', function(cb) {
+    return gulp.src('./app/**/*.html').pipe(gulp.dest('./frontend/partials'));
+});
+
+gulp.task('assets:data', function(cb) {
+    return gulp.src('./assets/data/**/*.json').pipe(gulp.dest('./frontend/data'));
+});
+
 gulp.task('clean', function(cb) {
     var targetDir = './frontend';
 
@@ -102,8 +110,8 @@ gulp.task('app:index', function(cb) {
     return gulp.src('index.html').pipe(gulp.dest('./frontend'));
 });
 
-gulp.task('app:build', ['bower:scripts', 'assets:images', 'assets:styles', 'app:scripts', 'app:index']);
+gulp.task('app:build', ['bower:scripts', 'assets:images', 'assets:styles', 'assets:data', 'app:scripts', 'app:index', 'app:partials']);
 
-gulp.task('build', function () {
+gulp.task('build', function() {
     runSequence('clean', 'app:build');
 });

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <div id="wrapper">
+        <div class="section" ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp" >
+           <div class="col s12 m7">
+    <div class="card horizontal">
+      <div class="card-image">
+        <a href="#/phones/{{phone.id}}">
+          <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+        </a>
+          </div>
+              <div class="card-stacked">
+              <div class="card-content">
+                <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                <p>{{phone.snippet}}</p>
+              </div>
+                <div class="card-action">
+                  <a href="#">More details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
