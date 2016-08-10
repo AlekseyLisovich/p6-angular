@@ -1,0 +1,22 @@
+body {
+  padding-top: 20px;
+}
+.card-image{
+  position: absolute;
+  top: 30px;
+  width: 100px;
+}
+.card{
+  width: 400px;
+}
+#wrapper {
+  width: 85%;
+  height: 500px;
+}
+.section {
+
+    float:left;
+    height:250px;
+    margin-left:10px;
+    width:500px;
+}
