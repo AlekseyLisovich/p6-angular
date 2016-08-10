@@ -1,16 +1,22 @@
 'use strict';
 
 // Define the `phonecatApp` module
-angular.module('phonesApp', [
+var app = angular.module('phonesApp', [
         'ngRoute',
         'phoneDetails',
         'phonesList',
-    ])
-    .config(['$locationProvider', '$routeProvider',
+    ]);
+    app.config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');
 
             $routeProvider.
+            when('/', {
+                templateUrl: 'partials/components/login/user-login.html'
+            }).
+            when('/dashboard', {
+                templateUrl: 'partials/components/login/dashboard.html'
+            }).
             when('/phones', {
                 template: '<phones-list></phone-list>'
             }).
@@ -21,7 +27,15 @@ angular.module('phonesApp', [
         }
     ]);
 
-'use strict';
+app.controller('loginCtrl', function($scope, $location){
+  $scope.submit =  function(){
+    var uname = $scope.username;
+    var password = $scope.password;
+    if($scope.username == 'admin' && $scope.password == 'admin'){
+      $location.path('dashboard');
+    }
+  };
+});
 
 // Register `phoneDetail` component, along with its associated controller and template
 angular.module('phoneDetails', []).component('phoneDetails', {
@@ -54,5 +68,6 @@ angular.module('phonesList', []).component('phonesList', {
         });
     }]
 });
+
 
 //# sourceMappingURL=app.js.map

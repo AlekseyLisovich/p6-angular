@@ -29,6 +29,6 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "start": "http-server ./frontend -a localhost -p 8080 -c-1"
+    "start": "http-server ./frontend -a localhost -p 3001 -c-1"
   }
 }
